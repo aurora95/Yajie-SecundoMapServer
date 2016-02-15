@@ -123,7 +123,7 @@
 	"mongo/client/dbclient.h"
 	"crow_all.h"
 
-1455197256 source:/home/aurora/Desktop/MapSocial_AppTCPServer/MapSocial_MapServer/src/XMapMessage.cpp
+1455524958 source:/home/aurora/Desktop/MapSocial_AppTCPServer/MapSocial_MapServer/src/XMapMessage.cpp
 	"XMapMessage.h"
 	<iostream>
 	<boost/property_tree/ptree.hpp>
@@ -136,12 +136,13 @@
 	<string>
 	"Settings.h"
 
-1455196627 /home/aurora/Desktop/MapSocial_AppTCPServer/MapSocial_MapServer/include/AppMapServer.h
+1455516303 /home/aurora/Desktop/MapSocial_AppTCPServer/MapSocial_MapServer/include/AppMapServer.h
 	<iostream>
 	<stdio.h>
 	<netinet/in.h>
 	<stdlib.h>
 	<string.h>
+	<string>
 	"XMap.h"
 	"XMongoDBService.h"
 	"crow_all.h"
@@ -150,10 +151,12 @@
 
 1454395988 /home/aurora/Desktop/MapSocial_AppTCPServer/MapSocial_MapServer/include/Settings.h
 
-1455197677 source:/home/aurora/Desktop/MapSocial_AppTCPServer/MapSocial_MapServer/src/AppMapServer.cpp
+1455516398 source:/home/aurora/Desktop/MapSocial_AppTCPServer/MapSocial_MapServer/src/AppMapServer.cpp
 	"AppMapServer.h"
 	"crow_all.h"
 	<iostream>
+	<string>
+	<sstream>
 	<ev++.h>
 	<stdio.h>
 	<netinet/in.h>
@@ -161,7 +164,7 @@
 	<string.h>
 	<netinet/tcp.h>
 
-1455196064 source:/home/aurora/Desktop/MapSocial_AppTCPServer/MapSocial_MapServer/src/XMap.cpp
+1455525592 source:/home/aurora/Desktop/MapSocial_AppTCPServer/MapSocial_MapServer/src/XMap.cpp
 	"XMap.h"
 	"XMongoDBService.h"
 	<string>

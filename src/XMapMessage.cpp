@@ -163,7 +163,7 @@ void XMapMessage::fromJSON(string src)
                 ptree ptbias = pt.get_child("bias");
                 bias.x = ptbias.get<int>("x");
                 bias.y = ptbias.get<int>("y");
-                length = ptbias.get<int>("length");
+                length = pt.get<int>("length");
                 string str_data = pt.get<string>("data");
                 strcpy(data, str_data.c_str());
                 break;

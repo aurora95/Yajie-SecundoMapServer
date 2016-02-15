@@ -5,6 +5,7 @@
 #include <netinet/in.h>
 #include <stdlib.h>
 #include <string.h>
+#include <string>
 #include "XMap.h"
 #include "XMongoDBService.h"
 #include "crow_all.h"
@@ -21,7 +22,7 @@ class AppMapServer
     protected:
     private:
         XMap getMap(double longitude, double latitude);
-        bool postMap(XMapMessage mapmsg);
+        std::string postMap(XMapMessage mapmsg);
         int64_t getMapVersion(XMapMessage mapmsg);
 
         crow::SimpleApp app;

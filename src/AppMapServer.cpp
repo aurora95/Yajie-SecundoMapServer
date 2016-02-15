@@ -59,18 +59,18 @@ XMap AppMapServer::getMap(double longitude, double latitude)
     return XMap(coord);
 }
 
-bool AppMapServer::postMap(XMapMessage mapmsg)
+std::string AppMapServer::postMap(XMapMessage mapmsg)
 {
     if (mapmsg.msg_type != XMAPMSG_POSTMAP)
-        return false;
+        return "message type error!";
     try{
         XMap xmap(mapmsg.loc);
         xmap.setData(mapmsg.data, mapmsg.bias.x, mapmsg.bias.y, mapmsg.length).save();
-        return true;
+        return "succeed";
     }
     catch(const mongo::DBException e){
         std::cout << "caught " << e.what() << std::endl;
-        return false;
+        return "fail";
     }
 }
 

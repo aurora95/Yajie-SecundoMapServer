@@ -117,14 +117,14 @@ XMap& XMap::save()
                                                     MONGO_QUERY("loc" << BSON_ARRAY(loc.longitude << loc.latitude)),
                                                     BSON("loc" << BSON_ARRAY(loc.longitude << loc.latitude) <<
                                                         "data" << data <<
-                                                        "$inc" << BSON("version" << 1)),
+                                                        "$inc" << BSON("version" << (long long)1)),
                                                     true);
         }
         else
         {
             XMongoDBService::GetConnection().save(MAPS_COLLECTION_NAME, BSON("loc" << BSON_ARRAY(loc.longitude << loc.latitude) <<
                                                         "data" << data <<
-                                                        "version" << 1));
+                                                        "version" << (long long)1));
         }
     }
     catch( const mongo::DBException &e ) {
